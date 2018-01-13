@@ -22,3 +22,17 @@ function printPyramid(height) {
     }
 }
 printPyramid(5);
+
+function drawPyramid(height) {
+    let pyramid = document.getElementById('pyramid');
+    let block = "#";
+    let space = '\xa0';
+    let str = "";
+    for(let i=0;i<height;i++){
+        str += space.repeat(height-i-1)+block+"#\n";
+        block+="#";
+    }
+    console.log(str);
+    pyramid.innerText = str;
+}
+drawPyramid(5);

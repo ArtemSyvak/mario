@@ -1,7 +1,3 @@
-
-
-
-
 /*
  * printPyramid
  *
@@ -15,24 +11,20 @@
  */
 function printPyramid(height) {
     let block = "#";
-    let space =' ';
-    for(let i=0;i<height;i++){
-        console.log(space.repeat(height-i-1)+block+"#");
-        block+="#";
+    let space =height-1;
+    for(let i=2;i<height+2;i++){
+        console.log((" ").repeat(space--)+block.repeat(i));
     }
 }
 printPyramid(5);
 
 function drawPyramid(height) {
     let pyramid = document.getElementById('pyramid');
-    let block = "#";
-    let space = '\xa0';
-    let str = "";
-    for(let i=0;i<height;i++){
-        str += space.repeat(height-i-1)+block+"#\n";
-        block+="#";
+    let count = height-1;
+    let space = "<i>&nbsp;</i>";
+    let block = "<div id='block'></div>";
+    for(let i=2;i<height+2;i++){
+    pyramid.innerHTML+="<div>"+space.repeat(count--)+block.repeat(i)+"</div>"+"<h6>";
     }
-    console.log(str);
-    pyramid.innerText = str;
 }
-drawPyramid(5);
+drawPyramid(8);

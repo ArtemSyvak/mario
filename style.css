@@ -1,4 +1,18 @@
 #pyramid{
+    padding: 0;
+    margin: 0;
+    float: left;
     color: black;
     font-family: "Courier New", monospace;
+}
+#block{
+    float: right;
+    width: 20px;
+    height: 20px;
+    background-color: maroon;
+    margin: 1px;
+    padding: 0;
+}
+h6{
+    margin: 4px;
 }
